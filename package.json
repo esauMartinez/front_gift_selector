@@ -1,0 +1,35 @@
+{
+  "name": "react-gift-selector",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@reduxjs/toolkit": "^1.9.0",
+    "axios": "^1.2.1",
+    "bootstrap": "^5.2.2",
+    "firebase": "^9.13.0",
+    "particles.js": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.7",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "socket.io-client": "^4.5.1",
+    "sweetalert2": "^11.6.14",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "sass": "^1.56.1",
+    "scss": "^0.2.4",
+    "vite": "^3.2.3"
+  }
+}

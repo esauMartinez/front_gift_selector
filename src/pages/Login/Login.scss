@@ -1,0 +1,38 @@
+@use '../../variables' as v;
+
+.div-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.div-login .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30%;
+    background-color: v.$secondary-color !important;
+}
+
+.logo {
+    width: 250px;
+}
+
+.card-login {
+    width: 40% !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.div-login .card {
+        width: 90% !important;
+    }
+
+    .logo {
+        width: 150px;
+    }
+	
+}

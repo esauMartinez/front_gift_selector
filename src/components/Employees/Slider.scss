@@ -1,0 +1,119 @@
+@use '../../variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Mountains+of+Christmas:wght@700&family=Poiret+One&display=swap');
+
+
+.slider-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.name-employee, .name-department {
+    color: v.$base-color !important;
+    text-align: center;
+}
+
+.slider-item {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: center;
+    justify-content: center;  
+    position: relative;
+}
+
+.slider-item:nth-child(2n) {
+    box-sizing: border-box;
+}
+
+.slider-card {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$secondary-color;
+    border-radius: 4px;
+    padding: 10px;
+    // border: 10px solid #43291f;
+    // box-shadow: 7px 9px 6px 4px rgba(255, 255, 255, 0.2);
+    .name-employee, .name-department {
+        color: v.$letters !important;
+        text-align: center;
+        font-size: 40px;        
+    }
+
+    .name-department {
+        font-family: 'Poiret One', cursive;
+    }
+
+    .name-employee {
+        // text-transform: lowercase !important;
+        text-transform: capitalize !important;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    // background-image: url('../../assets/santa.png');
+    // background-repeat: no-repeat;
+    // background-size: 150px;
+    // background-position: bottom left;
+    // background-size: 146px;
+    // background-position: bottom left;
+    // background-repeat-x: repeat;
+}
+
+.image-top {
+    position: absolute;
+    top: 0
+    // top: 65px;
+    // width: 198px;
+}
+
+.image-employee {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;    
+}
+
+#particles-js {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .slider-card {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        // border: none;
+    }
+
+    .slider-wrapper {
+        margin-top: 25px;
+    }
+
+    .image-employee {
+        position: absolute;
+        top: 15px;
+        padding: 10px;
+        background-color: v.$secondary-color;
+        box-shadow: 0px -15px 10px 4px rgb(255 255 255 / 20%);
+    }
+
+    // .image-top {
+    //     display: none;
+    // }
+}
