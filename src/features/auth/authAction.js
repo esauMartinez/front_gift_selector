@@ -5,7 +5,7 @@ export const authUser = createAsyncThunk(
     'auth/auth',
     async (payload) => {
         try {
-            const { data } = await axios.post('/api/login', payload)
+            const { data } = await axios.post('https://gift-selector-tsm.herokuapp.com/api/v1/login', payload)
             if (data === '') {
                 return null
             } else {

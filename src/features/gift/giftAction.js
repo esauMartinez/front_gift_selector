@@ -10,7 +10,7 @@ export const getEmployees = createAsyncThunk(
     'gift/getEmployees',
     async () => {
         try {
-            const { data } = await axios.get('/api/employees')
+            const { data } = await axios.get('https://gift-selector-tsm.herokuapp.com/api/v1/employees')
             return data
         } catch (error) {
             console.log(error)
@@ -22,7 +22,7 @@ export const getEmployeesAdmin = createAsyncThunk(
     'gift/getEmployeesAdmin',
     async () => {
         try {
-            const { data } = await axios.get('/api/employees')
+            const { data } = await axios.get('https://gift-selector-tsm.herokuapp.com/api/v1/employees')
             return data
         } catch (error) {
             console.log(error)
@@ -53,7 +53,7 @@ export const postEmployees = createAsyncThunk(
     'gift/postEmployees',
     async (payload, { dispatch }) => {
         try {
-            await axios.post('/api/employee', payload)
+            await axios.post('https://gift-selector-tsm.herokuapp.com/api/v1/employee', payload)
 
             Swal.fire({
                 position: 'top-end',
@@ -83,7 +83,7 @@ export const selectNewWinner = createAsyncThunk(
 
             const { id, idr } = await transition(container, selector)
             
-            const { data } = await axios.put(`/api/employee/${id}`)
+            const { data } = await axios.put(`https://gift-selector-tsm.herokuapp.com/api/v1/employee/${id}`)
 
             return idr
         } catch (error) {
