@@ -84,7 +84,6 @@ export const selectNewWinner = createAsyncThunk(
             const { id, idr } = await transition(container, selector)
             
             const { data } = await axios.put(`/api/employee/${id}`)
-            console.log(data)
 
             return idr
         } catch (error) {

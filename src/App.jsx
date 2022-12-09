@@ -11,10 +11,11 @@ import ProtectedRoute from "./router/ProtectedRoute"
 
 
 const App = () => {
-    const socket = io('/gift-raffle')
+    const socket = io('https://gift-selector-tsm.herokuapp.com/gift-raffle')
     const { isUserAuthenticated, permissions, roles } = useSelector(state => state.auth)
 
     socket.on('connect', () => {
+        console.log('connected')
         socket.emit('join to room', 'gift selector')
     })
 

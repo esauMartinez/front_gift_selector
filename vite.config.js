@@ -9,14 +9,14 @@ export default defineConfig({
     host: '0.0.0.0',
     proxy: {
       '/api': {
-        target: 'http://localhost:3100/api/v1',
+        target: 'https://gift-selector-tsm.herokuapp.com/api/v1',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       },
-      '/socket.io': {
-        target: 'ws://192.168.4.27:3100',
-        ws: true
-      }
+      // '/socket.io': {
+      //   target: 'ws://gift-selector-tsm.herokuapp.com',
+      //   ws: true
+      // }
     }
   }
 })
