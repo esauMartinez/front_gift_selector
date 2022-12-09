@@ -26,8 +26,8 @@ const App = () => {
             }
 
             <Routes>
-                <Route path="/" element={<Slider socket={socket} />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/selector" element={<Slider socket={socket} />} />
+                <Route path="/" element={<Login />} />
                 <Route element={<ProtectedRoute isAllowed={!!isUserAuthenticated && permissions.includes('SELECTOR')} redirectTo={'/login'} />}>
                     <Route path="/selector" element={<ButtonSelectorWinner socket={socket} />} />
                 </Route>
